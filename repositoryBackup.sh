@@ -21,5 +21,4 @@ echo Backup $backupName committed to the local git repository
 
 git push https://$gitUser:$gitPass@$gitURL --all
 
-
 echo Backup $backupName pushed to the remote git repository $1
