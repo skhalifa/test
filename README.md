@@ -1,6 +1,6 @@
 This is Fang Xu (Student Number: 10183618)
 
-This is Brandon WHite (Student Number: 10185441)
+This is Brandon White (Student Number: 10185441)
 
 This is Karim Atta (Student Number: 10184696)
 
