@@ -4,21 +4,23 @@
 
 currentTime=`date +%Y%m%d`
 locaFolder=$1
-githubURL=$2
-githubUser=$3
-githubPass=$4
+gitURL=$2
+gitUser=$3
+gitPass=$4
 backupName=backup$currentTime.tgz
 echo $backupName
 echo $locationFolder
-tar czvf $backupName $locaFolder --exclude='*.tgz'
+tar czvf $backupName $locaFolder --exclude='backup*.tgz'
  
-#git push https://git-githubUser:
 echo Backup $backupName created successfully!
 
-#scp
+git pull
+git add $backupName
+git commit -m 'New Backup'
 
-#echo Backup $backupName committed to the local git repository
+echo Backup $backupName committed to the local git repository
 
+git push https://$gitUser:$gitPass@$gitURL --all
 
 
 #echo Backup $backupName pushed to the remote git repository $1
