@@ -13,12 +13,12 @@ tar czvf $backupName $locaFolder --exclude='backup*.tgz'
  
 echo Backup $backupName created successfully!
 
-git pull
-git add $backupName
-git commit -m 'New Backup'
+git pull -q https://$gitUser:$gitPass@$gitURL
+git add --all $backupName
+git commit -qm 'New Backup' $backupName
 
 echo Backup $backupName committed to the local git repository
 
-git push https://$gitUser:$gitPass@$gitURL --all
+git push -q https://$gitUser:$gitPass@$gitURL --all
 
 echo Backup $backupName pushed to the remote git repository $1
