@@ -31,5 +31,5 @@ iptables -A OUTPUT -p TCP -s 130.15.100.100 --dport 3306 -j ACCEPT
 #Drop outgoing ssh traffic to all other computers 
 iptables -A INPUT -p TCP --dport 22 -j DROP
 
-#Can you still ssh the VM from your host machine? Why? If you cant, how to fix it?
+#Can youu still ssh the VM from your host machine? Why? If you cant, how to fix it?
 echo "No not possible to ssh the vm from host machine unless port forwarding is used"
