@@ -5,7 +5,7 @@ iptables -F OUTPUT
 iptables -F FORWARD
 
 #Enable ssh only from computers in the range 130.15.0.0 to 130.15.255.255 [netmask /16]                            
-sudo iptables -A INPUT -p TCP --sport 22 -s 130.15.0.0/16 -j ACCEPT 
+iptables -A INPUT -p TCP --sport 22 -s 130.15.0.0/16 -j ACCEPT 
 
 #Enable ssh from computers in any private network
 iptables -A INPUT -p TCP --sport 22 -s 192.168.0.0/16 -j ACCEPT
