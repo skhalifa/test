@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#q1
 fieldSep="$IFS"
 IFS=$'\n'
 pList=$(ps axo comm,pid,ppid,start,user | awk 'NR>1 {print $1 " PID:" $2 " PPID:" $3 " Started:" $4 " by:" $5}')
